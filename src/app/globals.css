@@ -2,32 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .icon {
+    @apply text-xl;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .iconlg {
+    @apply text-4xl;
+  }
+  .sidebg {
+    background: radial-gradient(
+        348.21% 99.94% at 92.5% 98.95%,
+        #000610 0%,
+        #000307 0.01%,
+        #050e41 41.15%,
+        #000307 100%
+      )
+  }
+  .cardstores {
+    background: linear-gradient(104.6deg, #00FEA3 -1.09%, #007077 49.96%);
+  }
+  .cardcameras {
+    background: linear-gradient(99.43deg, #02A7FD 2.64%, #141C64 78.77%);
+  }
+  .cardtheft {
+    background: linear-gradient(97.55deg, #FFB156 2.71%, #FF007A 94.29%);
+  }
+  .theftsprevented {
+    background: linear-gradient(97.55deg, #E4DF00 2.71%, #89B900 94.29%);
+  }
+  .divider {
+    @apply border-gray-100 my-4 flex-1 mt-3 mb-5;
+  }
+  .greenyellowbutton {
+    @apply rounded-full px-6 py-2 border-2 font-medium bg-gradient-to-r from-yellow-300 to-green-400;
   }
 }
