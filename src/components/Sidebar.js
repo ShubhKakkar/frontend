@@ -12,7 +12,6 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 const Sidebar = () => {
   const [analytics, setAnalytics] = useState(true);
   const path = usePathname();
-  console.log(path);
   return (
     <div className="sidebg h-full py-6 px-12 text-white">
       <Image

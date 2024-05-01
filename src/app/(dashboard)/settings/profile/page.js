@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
-import PasswordModel from "@/components/ui/PasswordModel";
+import PasswordModel from "@/components/PasswordModel";
 import { toast } from "react-toastify";
 
 const Setting = () => {

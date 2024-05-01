@@ -15,7 +15,7 @@ const ProfileCard = ({ handleCloseSettings }) => {
   };
   const ref = useDetectClickOutside({ onTriggered: handleCloseSettings });
   return (
-    <div className="absolute right-0 top-16 min-h-40 w-[300px] rounded-xl bg-gray-200 px-4 py-6 flex flex-col gap-2 items-center" ref={ref}>
+    <div className="absolute right-0 top-16 min-h-40 w-[300px] rounded-xl bg-gray-200 px-4 py-6 flex flex-col gap-2 items-center z-20" ref={ref}>
       <Image
         src={session?.user?.profile}
         className="rounded-full overflow-hidden"

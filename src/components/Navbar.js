@@ -4,7 +4,7 @@ import { IoGridOutline } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import ProfileCard from "../ui/ProfileCard";
+import ProfileCard from "./ProfileCard";
 
 const Navbar = () => {
   const { data: session } = useSession();

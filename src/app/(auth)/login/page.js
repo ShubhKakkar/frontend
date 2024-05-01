@@ -1,15 +1,17 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const { data:session } = useSession();
-  const router = useRouter('/');
-  if(session) {
-    router.push('/');
-  }
+  const { data: session } = useSession();
+  const router = useRouter();
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session, router]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleLogin = async () => {

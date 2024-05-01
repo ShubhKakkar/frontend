@@ -14,7 +14,10 @@ module.exports = {
       },
       colors: {
         highlighted: '#07E1A4',
-        bluetint: '#0066FF'
+        bluetint: '#0066FF',
+        low: '#4D6674',
+        line: '#DADFEA',
+        magenta: '#FF007A'
       }
     },
   },
