@@ -9,9 +9,11 @@ import { MdInsertChartOutlined, MdStorefront } from "react-icons/md";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { FaRegQuestionCircle } from "react-icons/fa";
+import { FiUsers } from "react-icons/fi";
 
 const Sidebar = () => {
   const [analytics, setAnalytics] = useState(true);
+  const [userManagment, setUserManagment] = useState(false);
   const path = usePathname();
   return (
     <div className="sidebg h-full py-6 px-12 text-white">
@@ -40,7 +42,7 @@ const Sidebar = () => {
             </div>
           </div>
           {analytics && (
-            <div className="ml-4 flex flex-col gap-7 my-7 text-sm">
+            <div className="ml-4 flex flex-col gap-7 mt-7 text-sm">
               <div
                 className={`flex items-center gap-2 ease-in dration-200 cursor-pointer ${
                   path === "/" && "text-highlighted"
@@ -56,6 +58,35 @@ const Sidebar = () => {
               >
                 <MdStorefront />
                 <Link href="/analytics/stores">Stores</Link>
+              </div>
+            </div>
+          )}
+        </div>
+        {/* User Managment */}
+        <div>
+          <div
+            className="flex items-center justify-between cursor-pointer"
+            onClick={() => {
+              setUserManagment((prev) => !prev);
+            }}
+          >
+            <div className="flex items-center gap-2 text-lg">
+              <FiUsers className="icon" />
+              <h6>User Managment</h6>
+            </div>
+            <div>
+              <MdOutlineKeyboardArrowRight className="icon" />
+            </div>
+          </div>
+          {userManagment && (
+            <div className="ml-4 flex flex-col gap-7 mt-7 text-sm">
+              <div
+                className={`flex items-center gap-2 ease-in dration-200 cursor-pointer ${
+                  path === "/user/operations" && "text-highlighted"
+                }`}
+              >
+                <IoGridOutline />
+                <Link href="/user/operations">User Operations</Link>
               </div>
             </div>
           )}
