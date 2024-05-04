@@ -47,7 +47,7 @@ const TheftStoresRow = ({ store }) => {
       </div>
 
       <div className="flex items-center justify-between w-1/3 flex-col">
-        <p className="py-1 px-2 text-dark-blue-4 bg-gray-200 rounded-full whitespace-nowrap text-xs">
+        <p className="py-1 px-2 text-dark-blue-4 bg-gray-200 rounded-full whitespace-nowrap text-[10px]">
           Cameras: <b>{store?.cameraCount}</b>
         </p>
         <p className="text-xs text-center text-dark-blue-4 mt-2">
@@ -57,7 +57,7 @@ const TheftStoresRow = ({ store }) => {
       </div>
 
       <div className="flex justify-between w-1/3 flex-col items-center">
-        <p className=" text-dark-blue-4 bg-gray-200 rounded-full text-xs py-1 px-2">
+        <p className=" text-dark-blue-4 bg-gray-200 rounded-full text-[10px] py-1 px-2">
           Case Resolved
         </p>
         <div className="relative grid mt-2">

@@ -20,32 +20,32 @@ export default function Dashboard() {
       />
       <div className="grid grid-cols-3 gap-x-6">
         {/* Thefts Detected */}
-        <div className="col-span-2">
+        <div className="col-span-2 card">
           <TheftsDetected />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 card">
           {/* All Stpres */}
           <AllStores selectedRange={selectedRange} />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-x-6 mb-4">
-        <div className="col-span-1">
+        <div className="col-span-1 card">
           {/* Store Busy Hours*/}
           <p className="font-medium">Store Busy Hours</p>
           <DashboardStoreBusyChart />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 card">
           {/* Daashboard Overview Table */}
           <p className="font-medium">Overview Table</p>
           <DashboardOverviewTable selectedRange={selectedRange} />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-x-6">
-        <div className="col-span-1">
+        <div className="col-span-1 card">
           {/* Employee effciency */}
           <DashboardEmployeeEff />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 card">
           {/* Safety Protocols */}
           <DashboardEmployeeSafetyProtocol />
         </div>

@@ -19,7 +19,7 @@ const Stores = () => {
       const maxPageLimit = process.env.NEXT_PUBLIC_MAX_PAGE_LIMIT;
 
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_BACKEND_URI}/store/getallstores1/${minPageLimit}/${maxPageLimit}/${formattedDate}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URI}/store/getAllStores1/${minPageLimit}/${maxPageLimit}/${formattedDate}`,
         {
           headers: {
             Authorization: `Bearer ${session?.user?.token}`,

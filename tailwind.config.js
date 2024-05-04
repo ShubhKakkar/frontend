@@ -17,7 +17,8 @@ module.exports = {
         bluetint: '#0066FF',
         low: '#4D6674',
         line: '#DADFEA',
-        magenta: '#FF007A'
+        magenta: '#FF007A',
+        disabled: '#416071'
       }
     },
   },
